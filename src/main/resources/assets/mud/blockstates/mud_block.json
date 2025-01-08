@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "mud:block/mud_block"}
+  }
+}
