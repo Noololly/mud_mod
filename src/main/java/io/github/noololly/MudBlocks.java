@@ -12,7 +12,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class MudBlocks {
-    private static final Block MUD_BLOCK = register(new Block(AbstractBlock.Settings.create().strength(0.5f).sounds(BlockSoundGroup.MUD)), "mud_block", true);
+    private static final Block MUD_BLOCK = register(
+            new Block(AbstractBlock.Settings.create().strength(0.5f).sounds(BlockSoundGroup.MUD)),
+            "mud_block", true);
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(
