@@ -1,4 +1,5 @@
 {
   "item.mud.mud": "Mud Ball",
-  "item.mud.mud_block": "Mud Block"
+  "item.mud.mud_block": "Mud Block",
+  "block.mud.mud_block": "Mud Block"
 }
