@@ -3,14 +3,23 @@ package io.github.noololly;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import io.github.noololly.MudDamageTypes;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 
 public class MudProjectile extends ThrownItemEntity {
+    public static World world;
+    public static final DamageSource MUD_PROJECTILE = new DamageSource(
+            world.getRegistryManager()
+                    .get(RegistryKeys.DAMAGE_TYPE)
+                    .entryOf(MudDamageTypes.MUD_BALL)
+    );
+
     public MudProjectile(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
@@ -37,6 +46,6 @@ public class MudProjectile extends ThrownItemEntity {
         if (entity instanceof HostileEntity) {
             damage += 2.0f;
         }
-        entity.damage(MudDamageTypes.MUD_PROJECTILE, damage);
+        entity.damage(MUD_PROJECTILE, damage);
    }
 }
