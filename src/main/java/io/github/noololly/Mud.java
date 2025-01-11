@@ -7,6 +7,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,12 +20,15 @@ public class Mud implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final EntityType<MudProjectile> MudProjectileEntityType = Registry.register(
+	public static final EntityType<MudProjectileEntity> MUD_PROJECTILE_ENTITY_TYPE = Registry.register(
+			Registry.ENTITY_TYPE,
 			new Identifier(MOD_ID, MUD_PROJECTILE_ENTITY_ID),
-			FabricEntityTypeBuilder.<MudProjectile>create(SpawnGroup.MISC, MudProjectile::new)
+			FabricEntityTypeBuilder.<MudProjectileEntity>create(SpawnGroup.MISC, MudProjectileEntity::new)
 					.dimensions(EntityDimensions.fixed(0.25F, 0.25F))
-					.trackRangeBlocks(4).trackedUpdateRate(10)
-					.build());
+					.trackRangeBlocks(4)
+					.trackedUpdateRate(10)
+					.build()
+	);
 
 	@Override
 	public void onInitialize() {
