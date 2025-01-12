@@ -3,7 +3,7 @@
 	"package": "io.github.noololly.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"ExampleClientMixin"
+		"MudClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
