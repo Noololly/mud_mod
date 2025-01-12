@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mud:mud"
+    },
+    {
+      "item": "mud:mud"
+    },
+    {
+      "item": "mud:mud"
+    },
+    {
+      "item": "mud:mud"
+    }
+  ],
+  "result": {
+    "item": "mud:mud_block",
+    "count": 1
+  }
+}
