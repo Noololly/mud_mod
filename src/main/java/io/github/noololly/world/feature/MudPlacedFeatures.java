@@ -14,11 +14,7 @@ import java.util.List;
 public class MudPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MUD_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Mud.MOD_ID, "mud_patch_placed"));
 
+
     public static RegistryKey<?> getRegistryEntry(RegistryKey<?> registryKey, Registry<?> registry) {
         return registry.getEntry(registryKey);
-    }
-
-    public static void registerPlacedFeatures() {
-        Registry.register(RegistryKeys.PLACED_FEATURE, new Identifier(Mud.MOD_ID, "mud_patch_placed"), MUD_PATCH_PLACED_KEY);
-    }
 }

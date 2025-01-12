@@ -1,5 +1,6 @@
 package io.github.noololly;
 
+import io.github.noololly.world.feature.MudWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,5 +20,6 @@ public class Mud implements ModInitializer {
 		// Proceed with mild caution.
 		MudItems.initialize();
 		MudBlocks.initialize();
+		MudWorldGeneration.generateWorldGen();
 	}
 }
