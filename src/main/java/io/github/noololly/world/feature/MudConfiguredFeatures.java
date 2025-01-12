@@ -21,12 +21,5 @@ public class MudConfiguredFeatures {
             Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,
             6,
             2,
-            (RegistryEntry<PlacedFeature>) MudPlacedFeatures.MUD_PATCH_PLACED_KEY
-    )
-    );
 
-    public static void registerConfiguredFeatures() {
-        // Register the configured feature with the appropriate namespace and value
-        Registry.register(RegistryKeys.CONFIGURED_FEATURE, new Identifier(Mud.MOD_ID, "mud_patch"), MUD_PATCH);
-    }
-}
+            (RegistryEntry<PlacedFeature>) MudPlacedFeatures.MUD_PATCH_PLACED_KEY
