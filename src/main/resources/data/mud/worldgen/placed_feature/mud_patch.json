@@ -1,8 +1,0 @@
-{
-  "feature": "mud:mud_patch",
-  "placement": [
-    {
-      "type": "minecraft:biome"
-    }
-  ]
-}
